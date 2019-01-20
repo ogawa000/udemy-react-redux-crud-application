@@ -23,20 +23,20 @@ class EventsIndex extends Component {
   render() {
     return (
       <React.Fragment>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Body</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.renderEvents()}
-        </tbody>
-      </table>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Body</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.renderEvents()}
+          </tbody>
+        </table>
 
-      <Link to="events/new">New Event</Link>
+        <Link to="events/new">New Event</Link>
       </React.Fragment>
     )
   }
