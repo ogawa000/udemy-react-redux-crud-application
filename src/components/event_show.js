@@ -78,6 +78,10 @@ const mapStateToProps = (state,ownProps) => {
 }
 const mapDispatchToProps = ({ deleteEvent,getEvent,putEvent })
 
-export default connect(mapStateToProps,mapDispatchToProps)(
-  reduxForm({validate,form:'eventShowForm',enableReinitialize:true})(EventsShow)
+export default connect(mapStateToProps,mapDispatchToProps)( 
+  reduxForm({
+    validate,
+    form:'eventShowForm',
+    enableReinitialize:true //enableReinitialize オプション設定だが、コンフリクトを避けるために必要！
+  })(EventsShow)
 )
